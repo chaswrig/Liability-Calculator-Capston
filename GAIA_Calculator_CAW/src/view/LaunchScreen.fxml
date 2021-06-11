@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LaunchController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="200.0" prefWidth="800.0" text="GAIA Claims" textAlignment="CENTER">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="200.0" prefWidth="800.0" text="Liability Calculator and Manager Dashboard" textAlignment="CENTER">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="200.0" prefWidth="800.0" spacing="150.0">
+               <children>
+                  <Button fx:id="calculatorBtn" mnemonicParsing="false" onAction="#onCalculatorClick" prefHeight="100.0" prefWidth="200.0" text="Liability Calculator" />
+                  <Button fx:id="dashboardBtn" mnemonicParsing="false" onAction="#onDashboardClick" prefHeight="100.0" prefWidth="200.0" text="Manager Dashboard" />
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" prefHeight="10.0" text="Button" visible="false">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
