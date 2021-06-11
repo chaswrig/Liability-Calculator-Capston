@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.YieldController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/IntersectionDiagram.png" />
+               </image>
+            </ImageView>
+            <HBox prefHeight="154.0" prefWidth="800.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="400.0">
+                     <children>
+                        <Label text="Insured Vehicle" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                           <children>
+                              <Label text="Did Insured Arrive at Stop Sign First?" />
+                              <RadioButton fx:id="ivFirstYesRB" mnemonicParsing="false" onAction="#ivFirstSelect" text="Yes">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="ivFirstTOG" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="ivFirstNoRB" mnemonicParsing="false" onAction="#ivFirstSelect" selected="true" text="No" toggleGroup="$ivFirstTOG" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <Label text="First Point of Impact:" />
+                              <RadioButton fx:id="ivFrontRB" mnemonicParsing="false" onAction="#ivPOISelect" selected="true" text="Front">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="ivPOITOG" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="ivMiddleRB" mnemonicParsing="false" onAction="#ivPOISelect" text="Middle " toggleGroup="$ivPOITOG" />
+                              <RadioButton fx:id="ivRearRB" mnemonicParsing="false" onAction="#ivPOISelect" text="Rear" toggleGroup="$ivPOITOG" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <Label text="Driver Action:" />
+                              <RadioButton fx:id="ivLeftRB" mnemonicParsing="false" onAction="#ivActionSelect" selected="true" text="Turn Left">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="ivActionTOG" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="ivStraightRB" mnemonicParsing="false" onAction="#ivActionSelect" text="Move Straight" toggleGroup="$ivActionTOG" />
+                              <RadioButton fx:id="ivRightRB" mnemonicParsing="false" onAction="#ivActionSelect" text="Turn Right" toggleGroup="$ivActionTOG" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="400.0">
+                     <children>
+                        <Label text="Claimant Vehicle" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <Label text="Starting Location:" />
+                              <RadioButton fx:id="cvLane1RB" mnemonicParsing="false" onAction="#cvLocationSelect" text="Lane 1">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="cvLocationTOG" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="cvLane2RB" mnemonicParsing="false" onAction="#cvLocationSelect" selected="true" text="Lane 2" toggleGroup="$cvLocationTOG" />
+                              <RadioButton fx:id="cvLane3RB" mnemonicParsing="false" onAction="#cvLocationSelect" text="Lane 3" toggleGroup="$cvLocationTOG" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <Label text="First Point of Impact:" />
+                              <RadioButton fx:id="cvFrontRB" mnemonicParsing="false" onAction="#cvPOISelect" selected="true" text="Front">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="cvPOITOG" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="cvMiddleRB" mnemonicParsing="false" onAction="#cvPOISelect" text="Middle " toggleGroup="$cvPOITOG" />
+                              <RadioButton fx:id="cvRearRB" mnemonicParsing="false" onAction="#cvPOISelect" text="Rear" toggleGroup="$cvPOITOG" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <Label text="Driver Action:" />
+                              <RadioButton fx:id="cvLeftRB" mnemonicParsing="false" onAction="#cvActionSelect" selected="true" text="Turn Left">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="cvActionTOG" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="cvStraightRB" mnemonicParsing="false" onAction="#cvActionSelect" text="Move Straight" toggleGroup="$cvActionTOG" />
+                              <RadioButton fx:id="cvRightRB" mnemonicParsing="false" onAction="#cvActionSelect" text="Turn Right" toggleGroup="$cvActionTOG" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="submitBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSubmitClick" prefHeight="100.0" prefWidth="200.0" text="Submit" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="800.0">
+               <children>
+                  <Button fx:id="backBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onBackClick" text="Back" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

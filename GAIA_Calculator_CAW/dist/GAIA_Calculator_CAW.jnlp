@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="GAIA_Calculator_CAW.jnlp">
+  <information>
+    <title>GAIA_Calculator_CAW</title>
+    <vendor>chase</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="GAIA_Calculator_CAW.jar" size="40060" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="GAIA_Calculator_CAW" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="gaia_calculator_caw.GAIA_Calculator_CAW"  name="GAIA_Calculator_CAW" />
+  <update check="always"/>
+</jnlp>

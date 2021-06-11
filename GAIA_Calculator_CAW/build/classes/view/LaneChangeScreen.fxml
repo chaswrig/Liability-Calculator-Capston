@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LaneChangeController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/LaneDiagram.png" />
+               </image>
+            </ImageView>
+            <HBox prefHeight="154.0" prefWidth="800.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="400.0">
+                     <children>
+                        <Label text="Left Vehicle" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <Label text="First Point of Impact:" />
+                              <RadioButton fx:id="leftFrontRB" mnemonicParsing="false" onAction="#onLPOISelect" selected="true" text="Front">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="leftPOITOG" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="leftMiddleRB" mnemonicParsing="false" onAction="#onLPOISelect" text="Middle " toggleGroup="$leftPOITOG" />
+                              <RadioButton fx:id="leftRearRB" mnemonicParsing="false" onAction="#onLPOISelect" text="Rear" toggleGroup="$leftPOITOG" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <Label text="Driver Action:" />
+                              <RadioButton fx:id="leftMoveLeftRB" mnemonicParsing="false" onAction="#onLActionSelect" selected="true" text="Move Left">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="leftActionTOG" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="leftMoveStraightRB" mnemonicParsing="false" onAction="#onLActionSelect" text="Move Straight" toggleGroup="$leftActionTOG" />
+                              <RadioButton fx:id="leftMoveRightRB" mnemonicParsing="false" onAction="#onLActionSelect" text="Move Right" toggleGroup="$leftActionTOG" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="400.0">
+                     <children>
+                        <Label text="Right Vehicle" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <Label text="First Point of Impact:" />
+                              <RadioButton fx:id="rightFrontRB" mnemonicParsing="false" onAction="#onRPOISelect" selected="true" text="Front">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="rightPOITOG" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="rightMiddleRB" mnemonicParsing="false" onAction="#onRPOISelect" text="Middle " toggleGroup="$rightPOITOG" />
+                              <RadioButton fx:id="rightRearRB" mnemonicParsing="false" onAction="#onRPOISelect" text="Rear" toggleGroup="$rightPOITOG" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <Label text="Driver Action:" />
+                              <RadioButton fx:id="rightMoveLeftRB" mnemonicParsing="false" onAction="#onRActionSelect" selected="true" text="Move Left">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="rightActionTOG" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="rightMoveStraightRB" mnemonicParsing="false" onAction="#onRActionSelect" text="Move Straight" toggleGroup="$rightActionTOG" />
+                              <RadioButton fx:id="rightMoveRightRB" mnemonicParsing="false" onAction="#onRActionSelect" text="Move Right" toggleGroup="$rightActionTOG" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="submitBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSubmitClick" prefHeight="100.0" prefWidth="200.0" text="Submit" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="800.0">
+               <children>
+                  <Button fx:id="backBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onBackClick" text="Back" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
